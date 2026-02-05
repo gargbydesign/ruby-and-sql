@@ -41,6 +41,12 @@ contact.save
 
 puts "Contacts: #{Contact.all.count}"
 
+#checking if the number of contacts present is = to what's expected
+expected_number_of_contacts = 3
+if expected_number_of_contacts != Contact.all.count
+  raise "it didn't work"
+end
+
 # 2. How many contacts work at Apple?
 apple_employees = Contact.where({"company_id" => apple["id"]}) 
 puts "Apple employees: #{apple_employees.count}"
