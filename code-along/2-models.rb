@@ -64,3 +64,10 @@ company = Company.find_by({"name" => "Apple"})
 puts company["url"]
 
 # 7. delete a row
+apple.destroy
+puts "Companies: #{Company.all.count}"
+
+companies = Company.all
+for company in companies
+  puts company["name"]
+end
